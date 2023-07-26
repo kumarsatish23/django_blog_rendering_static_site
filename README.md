@@ -1,0 +1,1 @@
+# django_blog_rendering_static_site

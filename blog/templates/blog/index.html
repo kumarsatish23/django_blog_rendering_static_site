@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+My Blog 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/max.png" %}" alt="The Author Of This Blog" />
+    <h2>iNKEDiMAGINATION BLOG</h2>
+  </header>
+  <p>Hello, dear readers! Our team is fueled by a relentless passion for blogging about the captivating realms of technology and the ever-evolving world!  </p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    {% for post in posts %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>OUR TEAM!</h2>
+  <p>
+    At our team, we have a passion for programming and helping others.<br>
+    We thoroughly enjoy exploring new technologies and innovations in various fields.
+  </p>
+  <p>
+    Our collective goal is to foster continuous growth as developers.<br>
+    We take great pride in supporting each other, 
+    and if given the opportunity to assist you, we would be delighted to do so!"
+  </p>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Contact Us</h3>
+    <p>Email: team@example.com</p>
+    <p>Phone: +1-123-456-7890</p>
+  </div>
+  <div class="footer-content">
+    <h3>Follow Us</h3>
+    <ul class="social-media">
+      <li><a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" class="twitter-icon"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" class="instagram-icon"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+{% endblock %}

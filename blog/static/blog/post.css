@@ -1,0 +1,65 @@
+/* Improved CSS with Additional Transition Animations */
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 1rem;
+  transition: color 0.2s ease;
+}
+
+.post a:hover {
+  color: #0056b3;
+}
+
+.post img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.post:hover img {
+  transform: scale(1.1);
+}
+
+.post h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.post:hover h3 {
+  color: #222;
+}
+
+.post time {
+  color: #666;
+  margin: 0.25rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.post:hover time {
+  color: #444;
+}

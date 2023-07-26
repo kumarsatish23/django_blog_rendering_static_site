@@ -1,0 +1,131 @@
+/* Improved CSS for Enhanced Experience */
+body {
+  background-color: #f7f7f7; /* Light gray background color */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#main-navigation {
+  background-color: #4a90e2; /* Blue navigation bar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#all-posts {
+  margin: 5rem auto;
+  max-width: 120rem;
+  padding: 0 2rem; /* Add padding on both sides */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #2e2e2e; /* Dark gray section title color */
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr)); /* Reduced the minimum size of posts */
+  gap: 3rem;
+}
+
+.post {
+  background-color: #fff; /* White post background color */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease;
+  height: 30rem; /* Fixed height for each post card */
+  display: flex;
+  flex-direction: column;
+}
+
+.post:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post img {
+  width: 100%;
+  height: 14rem; /* Reduced the height of the image */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Slightly reduced the border radius */
+}
+
+.post-content {
+  padding: 1rem;
+  flex: 1; /* Allow text content to take the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-title {
+  font-size: 1.8rem; /* Slightly reduced the font size of the post title */
+  color: #2e2e2e; /* Dark gray post title color */
+  margin-bottom: 1rem;
+}
+
+.post-text {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.8;
+  height: 10rem; /* Fixed height for the text content */
+  overflow: hidden;
+}
+
+.read-more {
+  display: block;
+  text-align: center;
+  background-color: #4a90e2; /* Blue read-more button color */
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 2rem; /* Adjusted the padding inside the read-more button */
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #2672c2; /* Darker blue on hover */
+}
+
+/* Optional: Add a subtle animation for more user engagement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post {
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Additional animation on hover for each post */
+.post:hover .post-content {
+  animation: bounceIn 0.6s ease;
+}
+
+/* Optional: Add a subtle bounce effect on hover */
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
